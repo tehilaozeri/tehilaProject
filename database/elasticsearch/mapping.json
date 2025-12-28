@@ -1,0 +1,39 @@
+{
+  "index": "orders",
+  "body": {
+    "mappings": {
+      "properties": {
+        "id": { 
+          "type": "keyword" 
+        },
+        "createdAt": { 
+          "type": "date" 
+        },
+        "fullName": { 
+          "type": "text",
+          "fields": {
+            "keyword": { "type": "keyword", "ignore_above": 256 }
+          }
+        },
+        "address": { 
+          "type": "text" 
+        },
+        "email": { 
+          "type": "keyword" 
+        },
+        "totalPrice": { 
+          "type": "double" 
+        },
+        "items": {
+          "type": "nested",
+          "properties": {
+            "productId": { "type": "keyword" },
+            "name": { "type": "text" },
+            "price": { "type": "double" },
+            "qty": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}

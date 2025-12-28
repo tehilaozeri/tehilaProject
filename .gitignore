@@ -1,0 +1,52 @@
+# ===== Global =====
+*.log
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# ===== Node Projects (client + server-express) =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.cache/
+coverage/
+
+# ===== React Client =====
+client/node_modules/
+client/build/
+
+# ===== Express Server =====
+server-express/node_modules/
+
+# Env files (important!)
+*.env
+.env.local
+.env.*.local
+
+# ===== .NET Backend =====
+server-dotnet/bin/
+server-dotnet/obj/
+*.user
+*.suo
+.vs/
+**/.vs/
+.vscode/
+*.db-wal
+*.db-shm
+
+# Do not ignore migrations (important for EF)
+!server-dotnet/Migrations/
+
+# ===== Database Files =====
+database/**/*.bak
+database/**/*.mdf
+database/**/*.ldf
+
+# ===== OS Files =====
+desktop.ini
+
